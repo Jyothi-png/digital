@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/changedetails.css' %}">
+</head>
+<body>
+
+
+
+<form action='changedetails' method='post' class='menu'>
+{% csrf_token %}
+
+<table cellpadding='10' class = 'table'>
+
+<tr> 
+<td> Adhar_no: </td>
+<td><input type="text" name='padhar'></td>
+</tr>
+
+<tr> <td class='row'> <h4>Vitals:</h4> </td> </tr>
+
+<tr>
+<td> BP </td>
+<td> <input type="text" name="bp"> </td>
+</tr>
+
+<tr>
+<td> Temperatue </td>
+<td> <input type="text" name="temp"> </td>
+</tr>
+
+<tr>
+<td> pulse_rate </td>
+<td> <input type="text" name="pulse"> </td>
+</tr>
+
+<tr>
+<td> Height </td>
+<td> <input type="text" name="height"> </td>
+</tr>
+
+<tr>
+<td> Weight </td>
+<td> <input type="text" name="weight"> </td>
+</tr>
+
+
+<tr> <td class='row'><h4>Prescriptions:</h4></td> </tr>
+
+<tr>
+<td> Type </td>
+<td> <input type="text" name="type"> </td>
+</tr>
+
+<tr>
+<td> Drug-Name </td>
+<td> <input type="text" name="drug"> </td>
+</tr>
+
+<tr>
+<td> Dose </td>
+<td> <input type="text" name="dose"></td>
+</tr>
+
+<tr>
+<td> Quantity </td>
+<td> <input type="text" name="quant"> </td>
+</tr>
+
+<tr>
+<td> Slot </td>
+<td> <input type="text" name="slot"> </td>
+</tr>
+
+<tr>
+<td> Timing </td>
+<td> <input type="text" name="time"> </td>
+</tr>
+
+<tr>
+<td> Prefered </td>
+<td> <input type="text" name="pref"> </td>
+</tr>
+
+<tr>
+<td> Note </td>
+<td> <input type="text" name="note"> </td>
+</tr>
+
+
+<tr>
+<td colspan = "2" align="center">
+<Button> Submit </Button>
+</td>
+</tr>
+
+</table>
+</form>
+
+
+    
+</body>
+</html>

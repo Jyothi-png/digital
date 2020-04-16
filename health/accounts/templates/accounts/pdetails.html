@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/pdetails.css' %}">
+</head>
+<body>
+{% block content %}
+
+<form action='changedetails' method='post' class='menu' align='left'>
+{% csrf_token %}
+<table align='left' cellpadding='10' class = 'table'>
+<tr> <h3 align='left'> General Details</h3> </tr>
+{% for rec in record %}
+
+<tr>
+<td> Adhar: </td>
+<td> {{rec.adhar_no}} </td>
+</tr>
+
+<tr>
+<td> Name: </td>
+<td> {{rec.first_name}} </td>
+</tr>
+
+<tr>
+<td> Age: </td>
+<td> {{rec.age}} </td>
+</tr>
+
+<tr>
+<td> Gender: </td>
+<td> {{rec.gender}} </td>
+</tr>
+
+{% endfor %}
+</table>
+</form>
+
+<form action='changedetails' method='POST' class='menu1'>
+{% csrf_token %}
+<table align='center' cellpadding='10' class = 'table1'>
+<tr> <h3 class='head'> Vitals </h3> </tr>
+{% for val in vit %}
+
+<tr>
+<td> BP </td>
+<td> {{val.BP}} </td>
+</tr>
+
+<tr>
+<td> Temperatue </td>
+<td> {{val.temperature}} </td>
+</tr>
+
+<tr>
+<td> pulse_rate </td>
+<td> {{val.pulse_rate}} </td>
+</tr>
+
+<tr>
+<td> Height </td>
+<td> {{val.height}} </td>
+</tr>
+
+<tr>
+<td> Weight </td>
+<td> {{val.weight}} </td>
+</tr>
+
+{% endfor %}
+
+</table>
+</form>
+
+<form action='changedetails' method='POST' class='menu2'>
+{% csrf_token %}
+<table align='center' cellpadding='10' class = 'table2'>
+<tr> <h3 class='head'> Prescription </h3> </tr>
+{% for x in medicine %}
+
+<tr>
+<td> Type </td>
+<td> {{x.type}} </td>
+</tr>
+
+<tr>
+<td> drug </td>
+<td> {{x.drug_name}} </td>
+</tr>
+
+<tr>
+<td> dose </td>
+<td> {{x.dose}} </td>
+</tr>
+
+<tr>
+<td> quantity </td>
+<td> {{x.quantity}} </td>
+</tr>
+
+<tr>
+<td> Slot </td>
+<td> {{x.slot}} </td>
+</tr>
+
+{% endfor %}
+<a href='./changedetails'> click </a>
+</table>
+</form>
+
+{% endblock  %}
+
+
+</body>
+</html>

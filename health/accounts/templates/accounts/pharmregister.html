@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/register.css' %}">
+</head>
+<body>
+    <h1 class='heading'> Registration </h1>
+    <div>
+    <form action="register" method="post" class="menu">
+        {% csrf_token %}
+        First Name:<input type="text" name="first_name"><br>
+        Last Name: <input type="text" name="last_name"><br>
+         Adhar_no: <input type="text" name="adhar_num" ><br>
+            Email: <input type="email" name="email" ><br>
+            Phone_No: <input type="number" name="number"><br> 
+        Qualification: <input type="text" name="qualification" ><br>
+          Address: <input type="text" name="address"><br>
+         Password: <input type="password" name="password1" ><br>
+ Confirm Password: <input type="password" name="password2"><br>
+        <Button type="Submit"> Submit </Button> 
+    </form>
+    </div>
+    
+</body>
+</html>

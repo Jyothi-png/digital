@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/home.css' %}">
+</head>
+{% block content %}
+<body>
+    <h1 class='heading'> Digital Health </h1>
+        <div> 
+            <form action="" class='menu' method="POST">  
+                {% csrf_token %}
+                <h2>Login</h2>
+                    
+                    <select name='login' >
+                        <option selected="selected" disabled>Login-as</option>
+                        <option value="Doctor"> Doctor </option>
+                        <option value="Patient"> Patient </option>
+                        <option value="Admin"> Admin </option>
+                        <option value="Pharmascist"> Pharmascist </option>
+                    </select>
+        
+                    <input type="text" name="username" placeholder="Username">
+                    <br/>
+                    <input type="password" name="password" placeholder="password">
+                    <br/>
+                    <button type="submit"> <!--<a href="./login"> --> Login </button>
+                    
+                </form>
+        </div>
+            
+        <div class='error'>
+        {% for message in messages %}
+        <h4> {{message}}  </h4>
+        {% endfor %}
+        </div>
+        
+</body>
+{% endblock %}
+
+</html>

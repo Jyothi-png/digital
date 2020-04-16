@@ -1,0 +1,28 @@
+body{
+    background-color: rgba(49, 135, 192, 0.74);
+}
+
+.menu{
+ 
+    padding: 30px;
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+}
+
+.menu1{
+    padding: 40px;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0,0.5);
+}
+
+.menu2{
+    padding: 40px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0,0.5);
+}

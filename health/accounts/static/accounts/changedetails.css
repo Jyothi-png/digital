@@ -1,0 +1,15 @@
+body{
+    background-color: rgba(49, 135, 192, 0.74);
+}
+
+.menu{
+    
+    padding: 30px;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+}
+
+.row{
+    left: 35%;
+}
